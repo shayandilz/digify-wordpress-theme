@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-    <!--get categories-->
+    <!--get categories for fun-->
 <?php
 $categories = get_categories();
 
