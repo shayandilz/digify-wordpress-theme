@@ -69,10 +69,10 @@ while (have_posts()) :
             </div>
         </section>
         <section class="row py-5">
-            <article class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column blog-sticky">
+            <article class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column">
                 <?php the_content(); ?>
             </article>
-            <aside class="col-lg-2 col-12 sticky-section">
+            <aside class="col-lg-2 col-12 sticky-side">
                 <div class="bg-purple d-flex flex-column gap-4 px-3 py-5 text-center">
                     <span class="text-white">
                         یک ماه
