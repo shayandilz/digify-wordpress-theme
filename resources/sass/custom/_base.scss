@@ -1,0 +1,77 @@
+html, body {
+    overflow-x: hidden;
+}
+p{
+    @extend .fw-light;
+}
+body {
+    direction: ltr;
+    font-family: Dana;
+}
+main{
+    padding-top: 75px;
+}
+.top-blog a{
+    font-size: 0.85rem!important;
+}
+a.text-semi-light:hover{
+    color: #000!important;
+}
+.text-justify{
+    text-align: justify;
+}
+.object-fit{
+    object-fit: cover;
+}
+.neg-margin-top{
+    margin-top: -5rem;
+}
+.active-list-blog{
+    color: #27abdb;
+}
+.transparent{
+    opacity: 0.3;
+}
+.z-top{
+    z-index: 2;
+}
+.z-below{
+    z-index: 1;
+}
+.pt-nav{
+    padding-top: 80px;
+}
+.gap-6{
+    gap: 6rem!important;
+}
+.max-width-25{
+    max-width: 28px;
+}
+.vh-65{
+    height: 65vh;
+}
+.lazy{
+    transition: all 0.3s ease-in-out;
+}
+.lazy-slow{
+    transition: all 0.9s ease-in-out;
+}
+.no-border-first:first-child{
+    border-left: none!important;
+}
+.no-border-last:last-child{
+    border-right: none!important;
+}
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.6rem;
+
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #fff;
+}
+progress[value]::-webkit-progress-value {
+    background-color: $bittersweet;
+    border-radius: 0px 10px 10px 0px;
+}

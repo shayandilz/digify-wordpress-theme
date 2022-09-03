@@ -1,0 +1,41 @@
+﻿//DANA font family ( 400, 500, 600, 700 ) according to Figma
+@font-face {
+    font-family: Dana;
+    font-style: normal;
+    font-weight: 400;
+    src: url('eot/DanaFaNum-Regular.eot');
+    src: url('eot/DanaFaNum-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('woff/DanaFaNum-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('woff2/DanaFaNum-Regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('ttf/DanaFaNum-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dana;
+    font-style: normal;
+    font-weight: 500;
+    src: url('eot/DanaFaNum-Medium.eot');
+    src: url('eot/DanaFaNum-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('woff/DanaFaNum-Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('woff2/DanaFaNum-Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('ttf/DanaFaNum-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dana;
+    font-style: normal;
+    font-weight: 600;
+    src: url('eot/DanaFaNum-DemiBold.eot');
+    src: url('eot/DanaFaNum-DemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('woff/DanaFaNum-DemiBold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('woff2/DanaFaNum-DemiBold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('ttf/DanaFaNum-DemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dana;
+    font-style: normal;
+    font-weight: 700;
+    src: url('eot/DanaFaNum-Bold.eot');
+    src: url('eot/DanaFaNum-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('woff/DanaFaNum-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('woff2/DanaFaNum-Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('ttf/DanaFaNum-Bold.ttf') format('truetype');
+}
