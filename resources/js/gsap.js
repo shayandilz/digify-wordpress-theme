@@ -12,12 +12,6 @@ MorphSVGPlugin.defaultType = "linear";
 
 $(function () {
 
-
-
-
-
-
-
     // check for element
     if(gsap.utils.toArray('#drawSvg')){
         let shapes = "#drawSvg path",
@@ -163,8 +157,7 @@ $(function () {
                         trigger: '.sticky-side',
                         pin: true,
                         start: 'top 50px',
-                        end: 'bottom center',
-                        markers: true
+                        end: 'bottom center'
                     }
                 })
             }
