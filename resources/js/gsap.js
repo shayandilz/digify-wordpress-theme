@@ -154,8 +154,10 @@ $(function () {
 
             }
         });
+
         ScrollTrigger.matchMedia({
             "(min-width: 1080px)": function () {
+
                 gsap.to('article',{
                     scrollTrigger:{
                         trigger: '.sticky-side',
