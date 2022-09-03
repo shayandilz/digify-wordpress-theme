@@ -44,8 +44,8 @@ const shadow = new WOW(
 shadow.init();
 
 document.addEventListener('DOMContentLoaded', function () {
-    // require('./gsap');
-    // "gsap": "npm:@gsap/shockingly@^3.10.4",
+    require('./gsap');
+
     //play pause button
     let playButton = document.getElementById("play_button");
     let video_tr = document.getElementById("video_tr")
