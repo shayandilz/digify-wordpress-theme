@@ -14,32 +14,7 @@ $(function () {
 
 
 
-    if(gsap.utils.toArray('progress, .sticky-side')){
-        gsap.to('progress', {
-            value: 100,
-            ease: 'none',
-            visibility:'visible',
-            scrollTrigger: {
-                trigger: "#startProgressBar",
-                scrub: 0.3,
-                start: 'start 0px',
-                end: 'bottom bottom'
-            }
-        });
-        ScrollTrigger.matchMedia({
-            "(min-width: 1080px)": function () {
-                gsap.to('article',{
-                    scrollTrigger:{
-                        trigger: '.sticky-side',
-                        pin: true,
-                        start: 'top 50px',
-                        end: 'bottom center'
-                    }
-                })
-            }
-        })
 
-    }
 
 
 
@@ -166,7 +141,34 @@ $(function () {
     }
 
 
+    if(gsap.utils.toArray('progress, .sticky-side')){
+        gsap.to('progress', {
+            value: 100,
+            ease: 'none',
+            visibility:'visible',
+            scrollTrigger: {
+                trigger: "#startProgressBar",
+                scrub: 0.3,
+                start: 'start 0px',
+                end: 'bottom bottom'
 
+            }
+        });
+        ScrollTrigger.matchMedia({
+            "(min-width: 1080px)": function () {
+                gsap.to('article',{
+                    scrollTrigger:{
+                        trigger: '.sticky-side',
+                        pin: true,
+                        start: 'top 50px',
+                        end: 'bottom center',
+                        markers: true
+                    }
+                })
+            }
+        })
+
+    }
 
 
 

@@ -264,5 +264,39 @@
 #input_1_7{
     @extend .d-none;
 }
+//comment form
+.wpd-rating-right,
+.wpd-rating-left{
+    display: none!important;
+}
+#wpdiscuz-comment-message {
+    top: unset!important;
+    bottom: 60px!important;
+    font-family: 'Dana'!important;
+    border-radius: 5px!important;
+}
+#wpdcom{
+    .wpd-form .wpdiscuz-textarea-wrap textarea{
+        height: 100px!important;
+    }
+    .wc_comm_submit.wpd_not_clicked.wpd-prim-button{
+        font-family: 'Dana'!important;
+    }
+    margin: 0px!important;
+    max-width: 100%!important;
+    .wpd-form .wpdiscuz-textarea-wrap.wpd-txt .wpd-textarea-wrap {
+        flex-basis: calc( 100% - 0px )!important;
+    }
+    .wpd-form .wpdiscuz-textarea-wrap.wpd-txt{
+        padding: 0px!important;
+    }
 
+    .wc-field-submit{
+        justify-content: flex-start!important;
+    }
+    .wpd-form-head{
+        margin: 0px!important;
+        border: 0px!important;
+    }
+}
 @import "responsive";
