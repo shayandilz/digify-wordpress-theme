@@ -111,11 +111,6 @@ function acf_populate_gf_forms_ids( $field ) {
 add_filter( 'acf/load_field/name=gravity_choices', 'acf_populate_gf_forms_ids' );
 
 
-/**
- * Generate breadcrumbs
- * @author CodexWorld
- * @authorURL www.codexworld.com
- */
 // helper function to find a menu item in an array of items
 function wpd_get_menu_item( $field, $object_id, $items ) {
 	foreach ( $items as $item ) {
@@ -177,7 +172,7 @@ function the_breadcrumb() {
 		echo 'صفحه اصلی';
 		echo '</a></li>';
 		if (is_category() || is_single()) {
-			echo '<li class="breadcrumb-item gooz">';
+			echo '<li class="breadcrumb-item">';
 			the_category(' </li><li class="breadcrumb-item"> ');
 			if (is_single()) {
 				echo '</li><li class="breadcrumb-item">';

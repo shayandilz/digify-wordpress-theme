@@ -13,13 +13,12 @@ MorphSVGPlugin.defaultType = "linear";
 $(function () {
 
     // check for element
-    if(gsap.utils.toArray('#drawSvg')){
+    if (gsap.utils.toArray('#drawSvg')) {
         let shapes = "#drawSvg path",
             tl = gsap.timeline();
 
-        tl.fromTo(shapes, {duration: 5, visibility:"visible", drawSVG:"0%"}, {duration: 5, drawSVG:"100%"})
+        tl.fromTo(shapes, {duration: 5, visibility: "visible", drawSVG: "0%"}, {duration: 5, drawSVG: "100%"})
     }
-
 
 
     let targets = gsap.utils.toArray(
@@ -122,24 +121,24 @@ $(function () {
                 scrub: true
             }
         })
-        icon_section.fromTo('.icon-section > div', {opacity: '0', delay: 0.4},{opacity: '1'})
+        icon_section.fromTo('.icon-section > div', {opacity: '0', delay: 0.4}, {opacity: '1'})
 
-        icon_section.fromTo(icon1,  {scale: '0', delay: 0.4},{scale: '1'})
-        icon_section.fromTo(iconSpan1,  {opacity: '0', delay: 0.4},{opacity: '1'})
+        icon_section.fromTo(icon1, {scale: '0', delay: 0.4}, {scale: '1'})
+        icon_section.fromTo(iconSpan1, {opacity: '0', delay: 0.4}, {opacity: '1'})
 
-        icon_section.fromTo(icon2,  {scale: '0', delay: 1.2},{scale: '1'})
-        icon_section.fromTo(iconSpan2,  {opacity: '0', delay: 1.2},{opacity: '1'})
+        icon_section.fromTo(icon2, {scale: '0', delay: 1.2}, {scale: '1'})
+        icon_section.fromTo(iconSpan2, {opacity: '0', delay: 1.2}, {opacity: '1'})
 
-        icon_section.fromTo(icon3,  {scale: '0', delay: 2},{scale: '1'})
-        icon_section.fromTo(iconSpan3,  {opacity: '0', delay: 2},{opacity: '1'})
+        icon_section.fromTo(icon3, {scale: '0', delay: 2}, {scale: '1'})
+        icon_section.fromTo(iconSpan3, {opacity: '0', delay: 2}, {opacity: '1'})
     }
 
 
-    if(gsap.utils.toArray('progress, .sticky-side')){
+    if (gsap.utils.toArray('progress, .sticky-side')) {
         gsap.to('progress', {
             value: 100,
             ease: 'none',
-            visibility:'visible',
+            visibility: 'visible',
             scrollTrigger: {
                 trigger: "#startProgressBar",
                 scrub: 0.3,
@@ -151,22 +150,21 @@ $(function () {
 
         ScrollTrigger.matchMedia({
             "(min-width: 1080px)": function () {
+                if ($('body').is('.single-post')) {
+                    let stickySidebar = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".blog-sticky",
+                            start: "top 90px",
+                            end: "bottom center",
+                            pin: ".sticky-section"
+                        }
+                    })
+                }
 
-                gsap.to('article',{
-                    scrollTrigger:{
-                        trigger: '.sticky-side',
-                        pin: true,
-                        start: 'top 50px',
-                        end: 'bottom center'
-                    }
-                })
             }
         })
 
     }
-
-
-
 
 
 })
