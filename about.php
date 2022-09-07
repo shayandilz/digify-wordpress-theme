@@ -8,9 +8,7 @@ get_header(); ?>
                 <h1 class="pb-3">
                     <?php the_field('section1_title'); ?>
                 </h1>
-                <p>
-                    <?php the_field('section1_text'); ?>
-                </p>
+                <?php the_field('section1_text'); ?>
             </div>
             <?php
             $image_section1 = get_field('section1_image');
@@ -26,9 +24,7 @@ get_header(); ?>
                 <h4 class="pb-3">
                     <?php the_field('section2_title'); ?>
                 </h4>
-                <p>
-                    <?php the_field('section2_text'); ?>
-                </p>
+                <?php the_field('section2_text'); ?>
             </div>
             <?php
             $image_section2 = get_field('section2_image');
@@ -44,9 +40,7 @@ get_header(); ?>
                 <h4 class="pb-3">
                     <?php the_field('section3_title'); ?>
                 </h4>
-                <p>
-                    <?php the_field('section3_text'); ?>
-                </p>
+                <?php the_field('section3_text'); ?>
                 <?php
                 $image_section3 = get_field('section3_image');
                 ?>
@@ -64,9 +58,9 @@ get_header(); ?>
                 <h4 class="pb-3 order-1 order-lg-2">
                     <?php the_field('section4_title'); ?>
                 </h4>
-                <p class="order-3 order-lg-3">
+                <div class="order-3 order-lg-3">
                     <?php the_field('section4_text'); ?>
-                </p>
+                </div>
             </div>
         </div>
         <div class="row align-items-center py-5">
@@ -74,9 +68,7 @@ get_header(); ?>
                 <h4 class="pb-3">
                     <?php the_field('section5_title'); ?>
                 </h4>
-                <p>
-                    <?php the_field('section5_text'); ?>
-                </p>
+                <?php the_field('section5_text'); ?>
                 <a class="btn link-dark d-inline-flex align-items-center justify-content-center">
                     شروع یک ماه استفاده رایگان!
                 </a>
@@ -95,13 +87,11 @@ get_header(); ?>
                 <h4 class="pb-3 ">
                     <?php the_field('section_contact_title'); ?>
                 </h4>
-                <p>
-                    <?php the_field('section_contact_text'); ?>
-                </p>
+                <?php the_field('section_contact_text'); ?>
                 <div class="col-lg-10 col-12">
                     <?php
                     $gravity = get_field('gravity_choices');
-                    echo do_shortcode('[gravityform id="'.$gravity.'" title="false" description="false" ajax="true"]') ?>
+                    echo do_shortcode('[gravityform id="' . $gravity . '" title="false" description="false" ajax="true"]') ?>
                 </div>
             </div>
         </div>

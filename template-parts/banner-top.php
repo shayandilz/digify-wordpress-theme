@@ -1,8 +1,15 @@
 <section class="py-5 d-flex align-items-center bg-white vh-65">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5 g-lg-2">
             <div class="col-lg-6 col-12">
-
+                <?php
+                $banner_image = get_field('banner_image');
+                ?>
+                <div class="card-shadow w-100 h-100 rounded-2 d-flex ratio-16x9 ratio">
+                    <img src="<?= $banner_image['url'] ?>"
+                         class="object-fit card-img-top border border-semi-light rounded-2"
+                         alt="<?= $banner_image['alt'] ?>">
+                </div>
             </div>
             <div class="col-lg-6 col-12">
                 <h1 class="text-dark fw-bold lh-base wow animate__animated animate__fadeInUp">

@@ -82,7 +82,7 @@ add_filter( 'walker_nav_menu_start_el', 'parent_menu_dropdown', 10, 4 );
 function parent_menu_dropdown( $item_output, $item, $depth, $args ) {
 
 	$icon = get_field( 'menu_icon', $item );
-	if ( ! empty( $item->classes ) && in_array( 'menu-item-object-custom', $item->classes ) ) {
+	if ( ! empty( $item->classes ) && in_array( 'menu-item-object-services', $item->classes ) ) {
 		return $item_output . ' <div class="position-relative"> ' . $icon . '</div>';
 	}
 

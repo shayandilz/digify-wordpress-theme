@@ -7,8 +7,8 @@ get_header(); ?>
 
     <!-- hero -->
     <section
-            class="flex-column d-flex justify-content-center align-items-center vh-65 overflow-hidden position-relative">
-        <video autoplay muted loop class="position-absolute w-100 top-0">
+            class="flex-column d-flex justify-content-center align-items-center vh-65 overflow-hidden position-relative video-section">
+        <video playsinline autoplay muted loop class="position-absolute w-100 top-0">
             <?php if ( get_field( 'banner_video' ) ): ?>
                 <source src="<?php the_field( 'banner_video' ); ?>" type="video/mp4">
             <?php endif; ?>
@@ -17,7 +17,7 @@ get_header(); ?>
             <?php endif; ?>
         </video>
         <div class="container text-center text-white ">
-            <h1 class="pb-5 fw-bolder lh-lg fs-1 animate__animated animate__fadeIn">
+            <h1 class="pb-0 pb-lg-5 fw-bolder lh-lg fs-1 animate__animated animate__fadeIn">
                 <?= get_field( 'banner_title' ) ?>
             </h1>
             <?php
@@ -70,26 +70,26 @@ get_header(); ?>
                 <h3 class="pb-lg-4 pb-2 lh-base fw-bolder wow animate__animated animate__fadeInLeft">
                     <?php the_field( 'start_title' ) ?>
                 </h3>
-                <p class="wow animate__animated animate__fadeInLeft">
+                <div class="wow animate__animated animate__fadeInLeft">
                     <?php the_field( 'start_text' ) ?>
-                </p>
+                </div>
             </div>
             <div class="col-12 col-lg-6 p-lg-5 mb-3 mb-lg-0 section-1">
-                <div class="card border-0 bg-transparent box1">
+                <div class="card border-0 bg-transparent box1 shadow_box animate__animated animate__zoomIn animate__delay-1s">
                     <?php $first_box = get_field( 'first_box' );
                     if ( $first_box ):
                         $image = $first_box['photo'];
                         ?>
-                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow shadow_box animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow">
                             <img src="<?php echo esc_url( $image['url'] ); ?>"
                                  class="object-fit border border-semi-light rounded-2"
                                  alt="<?php echo esc_attr( $image['alt'] ); ?>">
                         </div>
                         <div class="card-body text-dark px-0">
-                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold wow animate__animated animate__zoomIn animate__delay-1s">
+                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold">
                                 <?= $first_box['title'] ?>
                             </h5>
-                            <p class="card-text wow animate__animated animate__zoomIn animate__delay-1s">
+                            <p class="card-text">
                                 <?= $first_box['text'] ?>
                             </p>
                         </div>
@@ -101,21 +101,21 @@ get_header(); ?>
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 no-translate translate-middle-y p-lg-5 mb-3 mb-lg-0 section-2">
-                <div class="card border-0 bg-transparent box2">
+                <div class="card border-0 bg-transparent box2 shadow_box animate__animated animate__zoomIn animate__delay-1s">
                     <?php $second_box = get_field( 'second_box' );
                     if ( $second_box ):
                         $image = $second_box['photo'];
                         ?>
-                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow shadow_box animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow">
                             <img src="<?php echo esc_url( $image['url'] ); ?>"
                                  class="object-fit border border-semi-light rounded-2"
                                  alt="<?php echo esc_attr( $image['alt'] ); ?>">
                         </div>
                         <div class="card-body text-dark px-0">
-                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold wow animate__animated animate__zoomIn animate__delay-1s">
+                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold">
                                 <?= $second_box['title'] ?>
                             </h5>
-                            <p class="card-text wow animate__animated animate__zoomIn animate__delay-1s">
+                            <p class="card-text">
                                 <?= $second_box['text'] ?>
                             </p>
                         </div>
@@ -125,21 +125,21 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-12 col-lg-6 p-lg-5 mb-3 mb-lg-0 section-3">
-                <div class="card border-0 bg-transparent box3">
+                <div class="card border-0 bg-transparent box3 shadow_box animate__animated animate__zoomIn animate__delay-1s">
                     <?php $third_box = get_field( 'third_box' );
                     if ( $third_box ):
                         $image = $third_box['photo'];
                         ?>
-                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow shadow_box animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="ratio ratio-1x1 rounded-2 d-flex lazy-slow">
                             <img src="<?php echo esc_url( $image['url'] ); ?>"
                                  class="object-fit border border-semi-light rounded-2"
                                  alt="<?php echo esc_attr( $image['alt'] ); ?>">
                         </div>
                         <div class="card-body text-dark px-0">
-                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold wow animate__animated animate__zoomIn animate__delay-1s">
+                            <h5 class="card-title py-lg-3 pb-0 pt-2 fw-bold">
                                 <?= $third_box['title'] ?>
                             </h5>
-                            <p class="card-text wow animate__animated animate__zoomIn animate__delay-1s">
+                            <p class="card-text">
                                 <?= $third_box['text'] ?>
                             </p>
                         </div>
@@ -160,7 +160,7 @@ get_header(); ?>
         <h3 class="text-center fw-bolder text-dark">
             <?php the_field( 'partner_title' ); ?>
         </h3>
-        <div class="row pt-5">
+        <div class="row pt-5 g-5">
             <?php
             if ( have_rows( 'partner_list' ) ):
                 while ( have_rows( 'partner_list' ) ): the_row(); ?>

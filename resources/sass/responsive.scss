@@ -2,10 +2,16 @@
     main{
         margin-bottom: 500px
     }
+    footer{
+        position: fixed;
+    }
 }
 @include media-breakpoint-down(lg) {
-    main{
-        margin-bottom: 100vh;
+    .video-section {
+        height: 25vh;
+        h1{
+            font-size: 18px!important;
+        }
     }
     .no-border-first.no-border-last{
         border: none!important;
@@ -71,6 +77,9 @@
 
     small, .small {
         font-size: 0.875rem !important;
+    }
+    #field_1_7 {
+        grid-column: span 12 !important;
     }
 }
 

@@ -1,6 +1,6 @@
 </main>
 
-<footer class="bg-white pt-5 position-fixed bottom-0 end-0 start-0 w-100 z-below">
+<footer class="bg-white pt-5 bottom-0 end-0 start-0 w-100 z-below">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-12">
@@ -10,9 +10,9 @@
                     ?>
                     <img class="lazy" src="<?= $footer_logo ?>" alt="<?= get_bloginfo( 'name' ); ?>">
                 </a>
-                <p class="pt-5 text-justify small fw-lighter text-semi-light">
+                <div class="pt-5 text-justify small fw-lighter text-semi-light">
                     <?php the_field( 'footer_text', 'option' ); ?>
-                </p>
+                </div>
             </div>
             <div class="col-lg-3 col-6">
                 <h6 class="fw-bold pb-3 ">

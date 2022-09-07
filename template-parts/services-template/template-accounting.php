@@ -24,10 +24,11 @@
 			</a>
 		</div>
 		<div class="col-12">
-			<a class="text-center fs-6 py-2 d-flex flex-column justify-content-center align-items-center" href="#">
+			<a href="#more" class="text-center fs-6 py-2 d-flex flex-column justify-content-center align-items-center" href="#">
 				<?php get_template_part('template-parts/SVG/arrow-down'); ?>
 				بیش‌تر بخوانید
 			</a>
+            <div id="more"></div>
 			<p class="py-2 fw-normal text-center">
 				<?php the_field('service_text'); ?>
 			</p>

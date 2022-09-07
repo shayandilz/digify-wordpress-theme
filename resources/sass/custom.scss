@@ -34,6 +34,9 @@
     }
     .menu-item-has-children {
         @extend .custom-dropdown, .position-relative;
+        .custom-d{
+            cursor: pointer;
+        }
         .sub-menu{
             @extend .bg-white, .px-2, .dropdown-menu, .w-auto, .text-end;
             .menu-item{
@@ -73,6 +76,9 @@
 .card-shadow {
     box-shadow: -15px 15px 0px 0px #000;
 }
+.card-shadow2 > div:first-child {
+    box-shadow: -15px 15px 0px 0px #000;
+}
 //svg line draw
 .drawSvg path{
     visibility: hidden;
@@ -88,16 +94,33 @@
 }
 
 //Highlight Effect
-.highlight-yellow {
-    border-radius: 1em 0 1em 0;
-    background-image: linear-gradient(
-            -100deg,
-            rgba(128, 0, 222, 0.2),
-            rgba(128, 0, 222, 0.2) 95%,
-            rgba(128, 0, 222, 0.1)
-    );
-}
 
+.highlight-yellow {
+    @extend .position-relative;
+    &:before {
+        content: " ";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        width: 100%;
+        margin-left: -3px;
+        margin-right: 0px;
+        position: absolute;
+        background-image: linear-gradient(
+                        -100deg,
+                        rgba(128, 0, 222, 0.2),
+                        rgba(128, 0, 222, 0.2) 95%,
+                        rgba(128, 0, 222, 0.1)
+        );
+        /* transform: rotate(2deg); */
+        top: 30%;
+        /* bottom: 50%; */
+        left: -1px;
+        border-radius: 32px;
+        padding: 10px 3px 3px 10px;
+    }
+}
 //swiper slides
 .swiper1 {
     width: auto;
@@ -245,7 +268,9 @@
     visibility: hidden;
 }
 //gravity form
-.gform_fileupload_rules{
+
+.gform_fileupload_rules,
+.gform_wrapper .gform_validation_errors{
     @extend .d-none;
 }
 .ginput_container:not(.ginput_container_fileupload) > input,

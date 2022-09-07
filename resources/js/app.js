@@ -31,7 +31,7 @@ const shadow = new WOW(
         callback: function (box) {
             if (box) {
                 setTimeout(function () {
-                    box.classList.add('card-shadow')
+                    box.classList.add('card-shadow2')
                 }, 1000)
             }
 
@@ -46,6 +46,14 @@ shadow.init();
 document.addEventListener('DOMContentLoaded', function () {
     require('./gsap');
 
+
+    let mh = 0;
+    $(".equal-box > div").each(function () {
+        if (mh < $(this).height()) {
+            mh = $(this).height()
+        }
+    })
+    $(".equal-box > div").height(mh);
     //play pause button
     let playButton = document.getElementById("play_button");
     let video_tr = document.getElementById("video_tr")
@@ -75,9 +83,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     if (window.matchMedia('(max-width: 1200px)').matches) {
-
-        $('.menu-item-has-children').on('click', function (e) {
-            let subMenu = $(this).children("ul");
+        $('.menu-item-has-children > a').after(`
+        <div class="d-lg-none d-block p-2 custom-d position-absolute end-0 top-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>`);
+        $('.custom-d').on('click', function (e) {
+            let subMenu = $('.menu-item-has-children').children("ul");
             if (subMenu.is(':visible')) {
                 subMenu.slideUp();
             } else {

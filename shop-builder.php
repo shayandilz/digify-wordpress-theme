@@ -36,7 +36,7 @@ get_header(); ?>
             ?>
             <div class="col-lg-6 col-12 wow animate__animated animate__fadeIn d-flex justify-content-center">
                 <div class="card-shadow w-75 rounded-2 d-flex" style="height: 700px">
-                    <img src="<?= $how_image['url'] ?>" class="w-100 border border-semi-light rounded-2"
+                    <img src="<?= $how_image['url'] ?>" class="w-100 border border-semi-light rounded-2 object-fit"
                          alt="<?= $how_image['alt'] ?>">
                 </div>
             </div>

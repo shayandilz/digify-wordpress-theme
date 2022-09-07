@@ -3,15 +3,13 @@ import $ from "jquery";
 
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import DrawSVGPlugin from "gsap/DrawSVGPlugin";
-import MorphSVGPlugin from "gsap/MorphSVGPlugin";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MorphSVGPlugin, CSSRulePlugin)
-MorphSVGPlugin.defaultType = "linear";
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, CSSRulePlugin)
+
 
 
 $(function () {
-
     // check for element
     if (gsap.utils.toArray('#drawSvg')) {
         let shapes = "#drawSvg path",
@@ -19,8 +17,6 @@ $(function () {
 
         tl.fromTo(shapes, {duration: 5, visibility: "visible", drawSVG: "0%"}, {duration: 5, drawSVG: "100%"})
     }
-
-
     let targets = gsap.utils.toArray(
         ".icon-section > div," +
         ".icon-section," +
@@ -40,41 +36,41 @@ $(function () {
         ".tiles path:last-child"
     );
     if (targets.length) {
-        let box1 = document.querySelector(".box1");
-        let box2 = document.querySelector(".box2");
-        let box3 = document.querySelector(".box3");
-        ScrollTrigger.matchMedia({
-            "(min-width: 1080px)": function () {
-                let section1 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".section-1",
-                        scrub: 2,
-                        start: "top center",
-                        end: "bottom center"
-                    }
-                })
-                    .fromTo(box1, {translateY: 0}, {translateY: -130})
-                let section2 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".section-2",
-                        scrub: 2,
-                        start: "top center",
-                        end: "bottom center"
-                    }
-                })
-                    .fromTo(box2, {translateY: 0}, {translateY: -160})
-
-                let section3 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".section-3",
-                        scrub: 2,
-                        start: "top center",
-                        end: "bottom center"
-                    }
-                })
-                    .fromTo(box3, {translateY: 0}, {translateY: -70})
-            }
-        });
+        // let box1 = document.querySelector(".box1");
+        // let box2 = document.querySelector(".box2");
+        // let box3 = document.querySelector(".box3");
+        // ScrollTrigger.matchMedia({
+        //     "(min-width: 1080px)": function () {
+        //         let section1 = gsap.timeline({
+        //             scrollTrigger: {
+        //                 trigger: ".section-1",
+        //                 scrub: 2,
+        //                 start: "top center",
+        //                 end: "bottom center"
+        //             }
+        //         })
+        //             .fromTo(box1, {translateY: 0}, {translateY: -130})
+        //         let section2 = gsap.timeline({
+        //             scrollTrigger: {
+        //                 trigger: ".section-2",
+        //                 scrub: 2,
+        //                 start: "top center",
+        //                 end: "bottom center"
+        //             }
+        //         })
+        //             .fromTo(box2, {translateY: 0}, {translateY: -160})
+        //
+        //         let section3 = gsap.timeline({
+        //             scrollTrigger: {
+        //                 trigger: ".section-3",
+        //                 scrub: 2,
+        //                 start: "top center",
+        //                 end: "bottom center"
+        //             }
+        //         })
+        //             .fromTo(box3, {translateY: 0}, {translateY: -70})
+        //     }
+        // });
         let rule = CSSRulePlugin.getRule(".first-circle")
 
         let lineSVG = gsap.timeline({

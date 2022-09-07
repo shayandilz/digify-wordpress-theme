@@ -15,7 +15,7 @@
 
 <header id="main-header" class="w-100 position-fixed lazy">
     <div class="flex-nowrap bg-white">
-        <nav class="container navbar navbar-expand-xl rounded navbar-light px-2  lazy-slow justify-content-xl-between justify-content-xl-start animate__animated animate__fadeInDown animate__delay-1s">
+        <nav class="container navbar navbar-expand-xl rounded navbar-light px-2 lazy-slow justify-content-xl-between justify-content-xl-start animate__animated animate__fadeInDown animate__delay-1s">
             <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
