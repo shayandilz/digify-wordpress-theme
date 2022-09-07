@@ -5,6 +5,9 @@
     footer{
         position: fixed;
     }
+    .curve-right{
+        transform: translateY(-50px);
+    }
 }
 @include media-breakpoint-down(lg) {
     .video-section {

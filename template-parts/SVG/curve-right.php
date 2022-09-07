@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="position-absolute start-0 translate-middle-y" width="305" height="221" viewBox="0 0 305 221" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" class="position-absolute start-0 curve-right" width="305" height="221" viewBox="0 0 305 221" fill="none">
     <path id="star-path" d="M2.46643 40.7947C2.46643 40.7947 153.181 188.296 254.631 101.636C271.166 87.5164 279.589 65.8243 275.569 44.4589C274.053 36.373 270.807 28.0408 264.701 20.5527C239.737 -10.0627 190.711 0.254371 178.533 37.8415C173.201 54.2998 172.463 76.4183 182.802 105.521C202.575 161.111 247.828 207.827 305.856 218.492" stroke="url(#paint0_linear_326_4472)" stroke-width="4" stroke-linecap="round"/>
     <defs>
         <linearGradient id="paint0_linear_326_4472" x1="112.193" y1="167.015" x2="271.529" y2="25.1254" gradientUnits="userSpaceOnUse">

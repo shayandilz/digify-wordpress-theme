@@ -280,13 +280,13 @@
 .gform_footer > input{
     @extend .btn, .link-dark, .d-inline-flex, .align-items-center, .justify-content-center,.fw-lighter, .w-100;
 }
-#field_1_7 {
+#field_2_7 {
     grid-column: span 4!important;
     > label {
         @extend .link-white, .border, .rounded-1, .btn, .fs-6, .fw-lighter, .d-flex, .gap-2, .align-items-center, .justify-content-center;
     }
 }
-#input_1_7{
+#input_2_7{
     @extend .d-none;
 }
 //comment form
