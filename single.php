@@ -34,7 +34,7 @@ while (have_posts()) :
                 </h1>
                 <div class="d-inline-flex w-100 justify-content-between justify-content-lg-start">
                     <span class="text-semi-light small fw-lighter">
-                        زمان خواندن: پنج دقیقه
+                        زمان خواندن: <?= do_shortcode('[rt_reading_time]') ?> دقیقه
                     </span>
                     <span class="text-semi-light ms-5 small fw-lighter">
                         تاریخ انتشار:

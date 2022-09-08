@@ -96,7 +96,7 @@ if ( is_home() && ! is_category() && 1 == $paged ) {
                                                 <a href="<?php the_permalink(); ?>"
                                                    class="small text-semi-light text-decoration-underline">این
                                                     مقاله را بخوانید</a>
-                                                <span class="small text-semi-light">پنج دقیقه</span>
+                                                <span class="small text-semi-light"><?= do_shortcode('[rt_reading_time]') ?> دقیقه</span>
                                             </div>
                                         </div>
                                     </div>

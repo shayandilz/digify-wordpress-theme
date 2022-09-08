@@ -167,9 +167,9 @@ function the_breadcrumb() {
 	echo '<ul class="breadcrumb my-0 py-4">';
 	if (!is_home()) {
 		echo '<li class="breadcrumb-item"><a class="text-decoration-none text-semi-light" href="';
-		echo get_option('home');
+		echo get_post_type_archive_link( 'post' );
 		echo '">';
-		echo 'صفحه اصلی';
+		echo 'مقاله';
 		echo '</a></li>';
 		if (is_category() || is_single()) {
 			echo '<li class="breadcrumb-item">';

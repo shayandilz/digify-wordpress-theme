@@ -13,7 +13,9 @@
             <?php } ?>
         </div>
         <div class="position-absolute bottom-0 start-0 p-2 fw-light">
-            <span class="fs-6 text-dark fw-lighter">زمان خواندن: پنج دقیقه</span>
+            <span class="fs-6 text-dark fw-lighter">
+                زمان خواندن: <?= do_shortcode('[rt_reading_time]') ?> دقیقه
+            </span>
         </div>
     </div>
     <h6 class="card-title text-dark fw-bold pb-3 pt-4 mb-0">
