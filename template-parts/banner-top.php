@@ -1,7 +1,7 @@
 <section class="py-5 d-flex align-items-center bg-white vh-65">
     <div class="container">
-        <div class="row align-items-center g-5 g-lg-2">
-            <div class="col-lg-6 col-12">
+        <div class="row align-items-center g-5 g-lg-4">
+            <div class="col-lg-5 col-12">
                 <?php
                 $banner_image = get_field('banner_image');
                 ?>
@@ -11,14 +11,14 @@
                          alt="<?= $banner_image['alt'] ?>">
                 </div>
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12 ms-4">
                 <h1 class="text-dark fw-bold lh-base wow animate__animated animate__fadeInUp">
                     <?php the_field('banner_top_title'); ?>
                 </h1>
                 <p class="animate__animated animate__fadeInUp animate__delay-1s py-2">
                     <?php the_field('banner_top_text'); ?>
                 </p>
-                <div class="d-flex gap-5 py-2">
+                <div class="d-flex gap-3 py-2">
                     <?php
                     $dark_button = get_field( 'dark_button' );
                     if ( $dark_button ): ?>

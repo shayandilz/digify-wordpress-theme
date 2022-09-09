@@ -160,11 +160,11 @@ get_header(); ?>
         <h3 class="text-center fw-bolder text-dark">
             <?php the_field( 'partner_title' ); ?>
         </h3>
-        <div class="row pt-5 g-5">
+        <div class="row pt-5 g-5 justify-content-center align-items-center">
             <?php
             if ( have_rows( 'partner_list' ) ):
                 while ( have_rows( 'partner_list' ) ): the_row(); ?>
-                    <div class="col-lg col-6 overflow-hidden py-lg-5 border-start border-semi-light text-center no-border-first no-border-last">
+                    <div class="col-lg col-4 overflow-hidden py-lg-5 border-start border-semi-light text-center no-border-first no-border-last">
                         <div class="swiper swiper1">
                             <div class="swiper-wrapper">
                                 <?php if ( have_rows( 'partner' ) ):
