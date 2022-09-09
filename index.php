@@ -64,9 +64,11 @@ if ( is_home() && ! is_category() && 1 == $paged ) {
                                 <li class="swiper-slide position-relative rounded-2">
                                     <div class="bg-white card-shadow  text-center row align-items-center">
                                         <div class="col-12 col-lg-8 pe-0">
-                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                                 class="img-fluid"
-                                                 alt="<?php the_title(); ?>">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <img src="<?php echo get_the_post_thumbnail_url(); ?>"
+                                                     class="img-fluid"
+                                                     alt="<?php the_title(); ?>">
+                                            </a>
                                         </div>
                                         <div class="col-12 col-lg-4 text-start">
                                             <div class="p-4">

@@ -72,6 +72,9 @@
 .breadcrumb-item > a{
     @extend .text-decoration-none, .text-semi-light;
 }
+.single-post-img:hover img{
+    transform: scale(1.1);
+}
 //smart shadows behind cards
 .card-shadow {
     box-shadow: -15px 15px 0px 0px #000;

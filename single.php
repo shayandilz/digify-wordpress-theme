@@ -18,7 +18,7 @@ while (have_posts()) :
     <div class="position-fixed blog-progress w-100 z-top">
         <progress class="postProgressBar w-100" max="100" value="0"></progress>
     </div>
-    <div class="container" id="startProgressBar">
+    <div class="container" >
         <div class="row align-items-center">
             <div class="col-12">
 
@@ -41,26 +41,6 @@ while (have_posts()) :
                      <?php echo get_the_date('d  F , Y'); ?>
                     </span>
                 </div>
-<!--                <ul class="list-unstyled my-5">-->
-<!--                    <li class="text-semi-light text-decoration-none">-->
-<!--                        آنچه در این مقاله می‌خوانید:-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="active-list-blog text-decoration-none" href="#">-->
-<!--                            اینگیجمنت بالا، کلید کپشن خوب در اینستاگرام-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="text-semi-light text-decoration-none" href="#">-->
-<!--                            تعیین هدف پست اینستاگرام-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="text-semi-light text-decoration-none" href="#">-->
-<!--                            اینستاگرام چگونه یک کپشن خوب در اینستاگرام بنویسیم؟-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
             </div>
             <div class="col-lg-6 col-12">
                 <img src="<?php echo get_the_post_thumbnail_url() ?>"
@@ -69,23 +49,27 @@ while (have_posts()) :
             </div>
         </section>
         <section class="row py-5">
-            <article class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column blog-sticky">
+            <article id="startProgressBar" class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column blog-sticky">
                 <?php the_content(); ?>
             </article>
+            <?php
+            $sticky_side_post = get_field('sticky_side_post','option');
+            if ($sticky_side_post){?>
             <aside class="col-lg-2 col-12">
                 <div class="bg-purple d-flex flex-column gap-4 px-3 py-5 text-center sticky-section">
                     <span class="text-white">
-                        یک ماه
-استفاده رایگان!
+                        <?= $sticky_side_post['title'] ?>
                     </span>
                     <p class="text-white">
-                        با ثبت‌نام در دیجی‌فای یک ماه رایگان از تمام ابزارها استفاده کنید.
+                        <?= $sticky_side_post['text'] ?>
                     </p>
-                    <a class="btn link-dark d-flex align-items-center justify-content-center">
-                        ثبت‌نام در دیجی‌فای
+
+                    <a href="<?= $sticky_side_post['button']['url'] ?>" class="btn link-dark d-flex align-items-center justify-content-center">
+                        <?= $sticky_side_post['button']['title'] ?>
                     </a>
                 </div>
             </aside>
+            <?php } ?>
             <section class="text-start pt-5 col-lg-10">
                 <h3>
                     دیدگاه خود را بنویسید:

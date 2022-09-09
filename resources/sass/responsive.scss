@@ -84,6 +84,12 @@
     #field_1_7 {
         grid-column: span 12 !important;
     }
+    //breadcrumb
+    .breadcrumb{
+        flex-wrap: nowrap!important;
+        overflow-x: scroll!important;
+        white-space: nowrap!important;
+    }
 }
 
 
