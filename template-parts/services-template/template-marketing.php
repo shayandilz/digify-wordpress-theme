@@ -12,10 +12,10 @@
 			<h1 class="fw-bold py-3">
                 <?php the_title(); ?>
 			</h1>
-			<p class="text-dark pb-2">
+			<div class="text-dark pb-2">
                 <?php the_content(); ?>
 
-			</p>
+			</div>
             <?php
                 $service_button = get_field('service_button');
             ?>
@@ -45,9 +45,7 @@
 			<h4>
 				<?= $right_service_col['title'] ?>
 			</h4>
-			<p>
-                <?= $right_service_col['text'] ?>
-			</p>
+            <?= $right_service_col['text'] ?>
 			<img src="<?= $right_service_col['image']['url'] ?>"
 			     class="img-fluid border rounded-1"
 			     alt="<?= $right_service_col['image']['alt'] ?>">
@@ -60,9 +58,9 @@
 			<h4 class="order-2 order-lg-1">
                 <?= $left_service_col['title'] ?>
 			</h4>
-			<p class="order-1 order-lg-2">
+			<div class="order-1 order-lg-2">
                 <?= $left_service_col['text'] ?>
-			</p>
+			</div>
 
 		</div>
 	</section>

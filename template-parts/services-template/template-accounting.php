@@ -12,10 +12,10 @@
 			<h1 class="fw-bold py-3">
 				<?php the_title(); ?>
 			</h1>
-			<p class="text-dark pb-2">
+			<div class="text-dark pb-2">
 				<?php the_content(); ?>
 
-			</p>
+			</div>
 			<?php
 			$service_button = get_field('service_button');
 			?>
@@ -42,9 +42,7 @@
 			<h4>
 				<?= $horizontal_service_col['title'] ?>
 			</h4>
-			<p>
-				<?= $horizontal_service_col['text1'] ?>
-			</p>
+            <?= $horizontal_service_col['text1'] ?>
 		</div>
 		<?php wp_reset_postdata(); ?>
 		<div class="col-12 col-lg-6 px-4 d-flex flex-column-reverse flex-lg-column gap-lg-4 gap-2">

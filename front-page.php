@@ -149,7 +149,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="svg-draw">
+        <div class="svg-draw d-lg-block d-none">
             <?php get_template_part( 'template-parts/SVG/curve-right' ); ?>
         </div>
     </section>
@@ -187,7 +187,7 @@ get_header(); ?>
         <h3 class="text-center fw-bolder text-dark fs-3">
             <?php the_field( 'testi_title' ); ?>
         </h3>
-        <div class="row">
+        <div class="row position-relative swiper-custom-navigation">
             <div class="swiper swiper2 px-3">
                 <div class="swiper-wrapper">
                     <?php
@@ -218,10 +218,15 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+
                 <div class="swiper-pagination"></div>
             </div>
+               <div class="swiper-button-prev-unique position-absolute top-50 d-flex justify-content-center align-items-center">
+                   <i class="bi bi-chevron-left"></i>
+               </div>
+               <div class="swiper-button-next-unique position-absolute top-50 d-flex justify-content-center align-items-center">
+                   <i class="bi bi-chevron-right"></i>
+               </div>
         </div>
     </section>
     <?php get_template_part( 'template-parts/action-banner' ); ?>

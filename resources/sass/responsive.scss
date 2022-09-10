@@ -51,7 +51,12 @@
         padding: 1rem .5rem !important;
     }
 }
-
+@include media-breakpoint-up(sm){
+    .tiles2{
+        bottom: -140px;
+        left: 0;
+    }
+}
 @include media-breakpoint-down(sm) {
     .fs-1 {
         font-size: calc(1.325rem + 1.4vw) !important;
@@ -89,6 +94,16 @@
         flex-wrap: nowrap!important;
         overflow-x: scroll!important;
         white-space: nowrap!important;
+    }
+    .tiles.translate-middle-y{
+        transform: translateY(-120%)!important;
+    }
+    .tiles2{
+        bottom: -170px;
+        left: -60px;
+    }
+    .swiper2{
+        padding-bottom: 40px!important;
     }
 }
 

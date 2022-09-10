@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         disableOnInteraction: false,
     });
+
     const swiper2 = new Swiper('.swiper2', {
         // Optional parameters
 
@@ -151,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
             clickable: true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next-unique',
+            prevEl: '.swiper-button-prev-unique',
         },
         disableOnInteraction: false,
         breakpoints: {

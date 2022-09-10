@@ -1,4 +1,4 @@
-<section class="container py-5 wow animate__animated animate__fadeIn">
+<section class="container py-lg-5 py-3 wow animate__animated animate__fadeIn">
     <div class="bg-purple p-5 rounded-2 text-center">
         <div class="text-center lh-lg fs-3 text-white pb-5">
             <?php the_field( 'cta_title','option' ); ?>

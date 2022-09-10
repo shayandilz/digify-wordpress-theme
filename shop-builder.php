@@ -15,7 +15,7 @@ get_header(); ?>
             <h3 class="text-center pb-5 text-dark fs-2 fw-bolder lh-base wow animate__animated animate__fadeIn">
                 <?php the_field('how_title'); ?>
             </h3>
-            <div class="col-lg-6 col-12 d-flex flex-column justify-content-evenly">
+            <div class="col-lg-6 col-12 d-flex flex-column justify-content-start">
                 <?php if (have_rows('why_steps')): ?>
                     <?php
                     while (have_rows('why_steps')): the_row(); ?>
@@ -48,7 +48,7 @@ get_header(); ?>
                     </video>
                 </div>
             </div>
-            <div class="position-absolute start-0 w-auto" style="bottom: -140px">
+            <div class="position-absolute w-auto tiles2">
                 <?php get_template_part('template-parts/SVG/tiles'); ?>
             </div>
         </div>
