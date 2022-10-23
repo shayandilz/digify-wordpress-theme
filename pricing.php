@@ -105,9 +105,9 @@ get_header(); ?>
                             <h6 class="text-decoration-underline py-2 fw-bold">
                                 <?php the_sub_field('title'); ?>
                             </h6>
-                            <p class="fw-light small">
+                            <div class="fw-light small">
                                 <?php the_sub_field('text'); ?>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?>

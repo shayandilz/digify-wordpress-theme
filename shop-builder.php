@@ -8,14 +8,14 @@ get_header(); ?>
 <?php get_template_part('template-parts/service-icon'); ?>
 
     <section class="py-5 container px-4 px-lg-0">
-        <div class="row position-relative tile-section">
+        <div class="row position-relative tile-section justify-content-center">
             <div class="position-absolute end-0 w-auto translate-middle-y tiles">
                 <?php get_template_part('template-parts/SVG/tiles'); ?>
             </div>
             <h3 class="text-center pb-5 text-dark fs-2 fw-bolder lh-base wow animate__animated animate__fadeIn">
                 <?php the_field('how_title'); ?>
             </h3>
-            <div class="col-lg-6 col-12 d-flex flex-column justify-content-start">
+            <div class="col-lg-4 col-12 d-flex flex-column justify-content-start">
                 <?php if (have_rows('why_steps')): ?>
                     <?php
                     while (have_rows('why_steps')): the_row(); ?>

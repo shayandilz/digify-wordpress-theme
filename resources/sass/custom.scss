@@ -83,7 +83,16 @@
 .single-post-img:hover img {
   transform: scale(1.1);
 }
-
+//table of content
+.ez-toc-list {
+  @extend .list-unstyled;
+  li a{
+    @extend .text-decoration-none, .lazy;
+    :hover{
+      @extend .text-decoration-underline;
+    }
+  }
+}
 //smart shadows behind cards
 .card-shadow {
   box-shadow: -15px 15px 0px 0px #000;
