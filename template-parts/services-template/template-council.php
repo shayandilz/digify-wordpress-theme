@@ -41,7 +41,7 @@
 		$left_service_col = $vertical_service_col['left_service_col'];
 		$right_service_col = $vertical_service_col['right_service_col'];
 		?>
-		<div class="col-12 col-lg-6 px-4 d-flex flex-column gap-lg-4 gap-2">
+		<div class="col-12 col-lg-6 px-4 d-flex flex-column gap-lg-4 gap-2 justify-content-center">
 			<h4>
 				<?= $right_service_col['title'] ?>
 			</h4>

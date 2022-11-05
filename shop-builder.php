@@ -15,7 +15,7 @@ get_header(); ?>
             <h3 class="text-center pb-5 text-dark fs-2 fw-bolder lh-base wow animate__animated animate__fadeIn">
                 <?php the_field('how_title'); ?>
             </h3>
-            <div class="col-lg-4 col-12 d-flex flex-column justify-content-start">
+            <div class="col-lg-4 col-12 d-flex flex-column justify-content-center">
                 <?php if (have_rows('why_steps')): ?>
                     <?php
                     while (have_rows('why_steps')): the_row(); ?>

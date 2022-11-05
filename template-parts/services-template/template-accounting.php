@@ -38,7 +38,7 @@
 		<?php
 		$horizontal_service_col = get_field('horizontal_service_col');
 		?>
-		<div class="col-12 col-lg-6 px-4 d-flex flex-column gap-lg-4 gap-2">
+		<div class="col-12 col-lg-6 px-4 d-flex flex-column gap-lg-4 gap-2 justify-content-center">
 			<h4>
 				<?= $horizontal_service_col['title'] ?>
 			</h4>

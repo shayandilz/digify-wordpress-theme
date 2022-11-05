@@ -3,8 +3,8 @@
 get_header(); ?>
 
 
-    <section class="py-5 d-flex align-items-center vh-65 position-relative">
-        <div class="position-absolute top-0 end-0 mt-4">
+    <section class="py-5 d-flex align-items-start vh-100 position-relative">
+        <div class="position-absolute top-0 end-0 mt-4 d-none d-lg-block">
             <?php get_template_part( 'template-parts/SVG/curve-line' ); ?>
         </div>
         <div class="container mb-lg-5">
