@@ -4,7 +4,7 @@ get_header(); ?>
 
 
     <section class="py-5 d-flex align-items-center bg-white vh-65">
-        <div class="container">
+        <div class="container mb-lg-5">
             <div class="row align-items-center g-5 g-lg-4">
                 <div class="col-lg-5 col-12">
                     <?php

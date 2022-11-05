@@ -3,11 +3,11 @@
 get_header(); ?>
 
 
-    <section class="py-5 d-flex align-items-center vh-100 position-relative">
+    <section class="py-5 d-flex align-items-center vh-65 position-relative">
         <div class="position-absolute top-0 end-0 mt-4">
             <?php get_template_part( 'template-parts/SVG/curve-line' ); ?>
         </div>
-        <div class="container">
+        <div class="container mb-lg-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <h1 class="text-dark fw-bold lh-base pb-3 wow animate__animated animate__fadeInUp">
@@ -52,7 +52,7 @@ get_header(); ?>
                     <?php
                     $file = get_field('solution_video');
                     ?>
-                    <video id="video" height="500px" width="1200px" poster="<?php echo $file['image']['url'] ?>">
+                    <video id="video" height="400px" width="1200px" poster="<?php echo $file['image']['url'] ?>">
                         <source src="<?php echo $file['video']['url'] ?>" type="video/mp4">
                     </video>
                     <div id="video_tr"
