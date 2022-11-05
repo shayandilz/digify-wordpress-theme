@@ -8,8 +8,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/service-icon'); ?>
 
     <section class="py-5 container px-4 px-lg-0">
-        <div class="row position-relative tile-section justify-content-center">
-            <div class="position-absolute end-0 w-auto translate-middle-y tiles">
+        <div class="row position-relative tile-section justify-content-center flex-column-reverse flex-lg-row gap-lg-2 gap-6">
+            <div class="position-absolute end-0 w-auto translate-middle-y tiles d-none d-lg-block">
                 <?php get_template_part('template-parts/SVG/tiles'); ?>
             </div>
             <h3 class="text-center pb-5 text-dark fs-2 fw-bolder lh-base wow animate__animated animate__fadeIn">

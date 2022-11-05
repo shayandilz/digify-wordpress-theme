@@ -1,7 +1,7 @@
 <section class="py-5 d-flex align-items-center bg-white vh-65">
     <div class="container">
-        <div class="row align-items-center g-5 g-lg-4">
-            <div class="col-lg-5 col-12">
+        <div class="row justify-content-center align-items-center g-5 g-lg-4">
+            <div class="col-lg-5 col-10">
                 <?php
                 $banner_image = get_field('banner_image');
                 ?>

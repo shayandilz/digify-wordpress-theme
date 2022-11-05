@@ -26,7 +26,7 @@ if ($box_purple_choice == 'two') { ?>
                             <?php
                             $button_more = get_sub_field('link');
                             if ($button_more) { ?>
-                                <a class="text-decoration-underline pt-2 fs-6 fw-lighter d-flex align-items-center gap-3"
+                                <a class="text-decoration-underline pt-2 fs-6 fw-lighter"
                                    href="<?= esc_url($button_more['url']) ?>">
                                     <?= $button_more['text'] ?>
                                     <?php get_template_part('template-parts/SVG/arrow-icon') ?>

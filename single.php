@@ -51,50 +51,52 @@ while (have_posts()) :
                      alt="<?php the_title(); ?>">
             </div>
         </section>
-        <section class="row py-5">
-            <article id="startProgressBar" class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column blog-sticky">
-                <?php the_content(); ?>
-            </article>
+        <section class="row py-5 blog-sticky">
+            <div id="startProgressBar" class="col-lg-10 col-12 text-dark d-flex gap-3 flex-column">
+                <article>
+                    <?php the_content(); ?>
+                </article>
+                <div class="text-start pt-5 col-lg-12">
+                    <h3>
+                        دیدگاه خود را بنویسید:
+                    </h3>
+
+                    <?php
+                    if (comments_open() || get_comments_number()) :
+                        comments_template();
+                    endif;
+                    ?>
+                </div>
+                <div class="col-12 py-5">
+                    <h6 class="pb-3 text-start text-lg-center fs-3 fw-bold">جدیدترین پست‌های بلاگ دیجی‌فای</h6>
+                    <div class="row gap-5 gap-lg-0">
+                        <div class="col-lg-6 col-12">
+                            <?php get_template_part('template-parts/blog-post'); ?>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <?php get_template_part('template-parts/blog-post'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php
             $sticky_side_post = get_field('sticky_side_post','option');
             if ($sticky_side_post){?>
-            <aside class="col-lg-2 col-12">
-                <div class="bg-purple d-flex flex-column gap-4 px-3 py-5 text-center sticky-section">
+                <aside class="col-lg-2 col-12">
+                    <div class="bg-purple d-flex flex-column gap-4 px-3 py-5 text-center sticky-section">
                     <span class="text-white">
                         <?= $sticky_side_post['title'] ?>
                     </span>
-                    <p class="text-white">
-                        <?= $sticky_side_post['text'] ?>
-                    </p>
+                        <p class="text-white">
+                            <?= $sticky_side_post['text'] ?>
+                        </p>
 
-                    <a href="<?= $sticky_side_post['button']['url'] ?>" class="btn link-dark d-flex align-items-center justify-content-center">
-                        <?= $sticky_side_post['button']['title'] ?>
-                    </a>
-                </div>
-            </aside>
+                        <a href="<?= $sticky_side_post['button']['url'] ?>" class="btn link-dark d-flex align-items-center justify-content-center">
+                            <?= $sticky_side_post['button']['title'] ?>
+                        </a>
+                    </div>
+                </aside>
             <?php } ?>
-            <section class="text-start pt-5 col-lg-10">
-                <h3>
-                    دیدگاه خود را بنویسید:
-                </h3>
-
-                <?php
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-                ?>
-            </section>
-            <section class="col-lg-10 col-12 py-5">
-                <h6 class="pb-3 text-start text-lg-center fs-3 fw-bold">جدیدترین پست‌های بلاگ دیجی‌فای</h6>
-                <div class="row gap-5 gap-lg-0">
-                    <div class="col-lg-6 col-12">
-                        <?php get_template_part('template-parts/blog-post'); ?>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <?php get_template_part('template-parts/blog-post'); ?>
-                    </div>
-                </div>
-            </section>
         </section>
 
     </div>
