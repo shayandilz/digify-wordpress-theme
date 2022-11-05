@@ -41,6 +41,9 @@ while (have_posts()) :
                      <?php echo get_the_date('d  F , Y'); ?>
                     </span>
                 </div>
+                <div class="list-unstyled mt-4">
+                    <?php echo do_shortcode('[TOC]') ?>
+                </div>
             </div>
             <div class="col-lg-6 col-12">
                 <img src="<?php echo get_the_post_thumbnail_url() ?>"

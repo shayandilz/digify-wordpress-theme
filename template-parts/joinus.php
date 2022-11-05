@@ -6,7 +6,7 @@
                 <?php the_field( 'join_title','option' ); ?>
             </h5>
         </div>
-        <div class="col-lg-6 col-12 row justify-content-center align-items-center wow animate__animated animate__fadeIn icon-section">
+        <div class="col-lg-6 col-12 row justify-content-center align-items-start wow animate__animated animate__fadeIn icon-section">
             <?php
             $first_step = get_field( 'first_step','option'  );
             if ( $first_step ): ?>
