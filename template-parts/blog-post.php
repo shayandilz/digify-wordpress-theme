@@ -3,11 +3,11 @@
 <div class="card single-post-img bg-transparent border-0 text-bg-dark lazy">
     <div class="position-relative rounded-1 overflow-hidden">
         <img src="<?php echo get_the_post_thumbnail_url() ?>" class="card-img lazy" alt="<?php the_title(); ?>">
-        <div class="card-img-overlay p-4">
+        <div id="category_cut" class="card-img-overlay p-3">
             <?php
             $category_detail = get_the_category($post->ID);//$post->ID
             foreach($category_detail as $category) { ?>
-            <a href="<?= get_category_link( $category->term_id )  ?>" class="text-decoration-none py-2 px-3 me-2 fs-6 fw-lighter bg-purple-tr border text-purple border-purple rounded-pill">
+            <a href="<?= get_category_link( $category->term_id )  ?>" class="text-decoration-none py-2 px-3 me-2 small fw-lighter bg-purple-tr border text-purple border-purple rounded-pill">
                 <?php echo $category->name?>
             </a>
             <?php } ?>

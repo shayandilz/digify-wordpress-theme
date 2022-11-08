@@ -83,6 +83,44 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     if (window.matchMedia('(max-width: 1200px)').matches) {
+        //fix post card category break line
+
+
+        $('div > .single-post-img #category_cut').each(function () {
+            // let parentMain = this;
+            let parent = document.getElementById('category_cut').offsetWidth
+            let children = this.children;
+            let totalWidth = 0;
+
+            // console.log(children.length)
+            for (var i = 0; i < children.length; i++) {
+                totalWidth += parseInt(children[i].offsetWidth, 10);
+            }
+
+            // console.log(totalWidth)
+
+            if (totalWidth > parent) {
+                function short(length) {
+                    var len = children.length;
+
+                    for (var i = 0; i < len; i++) {
+                        var g = children[i].innerHTML;
+                        var x = "...";
+                        var leng = length - 5;
+                        var html = g.substring(0, leng) + "";
+                        var allHTML = html + x;
+                        children[i].innerHTML = allHTML;
+                    }
+                }
+
+                short(39);
+            }
+        });
+
+
+
+
+
         $('.menu-item-has-children > a').after(`
         <div class="d-lg-none d-block p-2 custom-d position-absolute end-0 top-0 mt-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">

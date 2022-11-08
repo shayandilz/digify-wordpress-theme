@@ -86,7 +86,7 @@ if ( is_home() && ! is_category() && 1 == $paged ) {
                                                 <p class="pt-4 ">
                                                     <?php
                                                     $excerpt = get_the_excerpt();
-                                                    $excerpt = substr( $excerpt, 0, 300 );
+                                                    $excerpt = substr( $excerpt, 0, 200 );
                                                     $excerpt = substr( $excerpt, 0, strripos( $excerpt, " " ) );
                                                     $excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
 
