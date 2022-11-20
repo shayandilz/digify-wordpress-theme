@@ -1,4 +1,4 @@
-<section class="py-5 d-flex align-items-center bg-white vh-65">
+<section class="py-5 d-flex align-items-center bg-white">
     <div class="container">
         <div class="row justify-content-center align-items-center g-5 g-lg-4">
             <div class="col-lg-5 col-10">
@@ -11,7 +11,7 @@
                          alt="<?= $banner_image['alt'] ?>">
                 </div>
             </div>
-            <div class="col-lg-6 col-12 ms-4">
+            <div class="col-lg-6 col-12 mx-4">
                 <h1 class="text-dark fw-bold lh-base wow animate__animated animate__fadeInUp">
                     <?php the_field('banner_top_title'); ?>
                 </h1>

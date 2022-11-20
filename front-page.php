@@ -42,7 +42,7 @@ get_header(); ?>
         <?php
         $services = get_field('services_list');
         if ($services): ?>
-            <div class="row wow animate__animated animate__fadeIn">
+            <div class="row justify-content-center wow animate__animated animate__fadeIn">
                 <?php foreach ($services as $post):
                     setup_postdata($post); ?>
                     <a href="<?php the_permalink(); ?>"
@@ -205,7 +205,7 @@ get_header(); ?>
                                     </div>
                                     <div class="card-body neg-margin-top">
                                         <h5 class="card-title"><?php the_sub_field('title'); ?></h5>
-                                        <a href="<?php the_sub_field('url'); ?>" class="card-link text-card"><?php the_sub_field('url'); ?></a>
+                                        <a rel='nofollow' href="<?php the_sub_field('url'); ?>" class="card-link text-card"><?php the_sub_field('url'); ?></a>
                                         <p class="card-text pt-2">
                                             <?php the_sub_field('text'); ?>
                                         </p>

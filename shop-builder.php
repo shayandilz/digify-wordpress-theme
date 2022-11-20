@@ -8,11 +8,11 @@ get_header(); ?>
 <?php get_template_part('template-parts/service-icon'); ?>
 
     <section class="py-5 container px-4 px-lg-0">
-        <div class="row position-relative tile-section justify-content-center flex-column-reverse flex-lg-row gap-lg-2 gap-6">
+        <div class="row position-relative tile-section justify-content-center flex-column-reverse flex-lg-row gap-lg-2 gap-5">
             <div class="position-absolute end-0 w-auto translate-middle-y tiles d-none d-lg-block">
                 <?php get_template_part('template-parts/SVG/tiles'); ?>
             </div>
-            <h3 class="text-center pb-5 text-dark fs-2 fw-bolder lh-base wow animate__animated animate__fadeIn">
+            <h3 class="text-center pb-0 pb-lg-5 text-dark fs-2 fw-bolder order-1 order-lg-0 lh-base wow animate__animated animate__fadeIn">
                 <?php the_field('how_title'); ?>
             </h3>
             <div class="col-lg-4 col-12 d-flex flex-column justify-content-center">
@@ -48,7 +48,7 @@ get_header(); ?>
                     </video>
                 </div>
             </div>
-            <div class="position-absolute w-auto tiles2">
+            <div class="position-absolute w-auto tiles2 d-none d-lg-block">
                 <?php get_template_part('template-parts/SVG/tiles'); ?>
             </div>
         </div>

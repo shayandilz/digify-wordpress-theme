@@ -87,10 +87,10 @@
 	</div>
 </section>
 <section class="container">
-	<div class="row py-5">
+	<div class="row py-5 g-5 g-lg-1">
         <?php $image_gform = get_field('image_gform'); ?>
 		<div class="col-lg-6 col-12 wow animate__animated animate__fadeIn d-flex justify-content-center">
-			<div class="card-shadow w-75 rounded-2 d-flex" style="height: 600px">
+			<div class="card-shadow w-75 rounded-2 d-flex">
 				<img src="<?= $image_gform['url'] ?>" class="w-100 border border-semi-light rounded-2"
 				     alt="<?= $image_gform['alt'] ?>">
 			</div>

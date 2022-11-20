@@ -46,7 +46,26 @@ shadow.init();
 document.addEventListener('DOMContentLoaded', function () {
     require('./gsap');
 
-
+    function css(element, style) {
+        for (const property in style)
+            element.style[property] = style[property];
+    }
+    var myCollapsible = document.getElementById('navbarNav')
+    const html = document.querySelector('html');
+    myCollapsible.addEventListener('shown.bs.collapse', function () {
+        css(html, {
+            'margin': '0',
+            height: '100%',
+            overflow: 'hidden'
+        });
+    })
+    myCollapsible.addEventListener('hidden.bs.collapse', function () {
+        css(html, {
+            'margin': '0',
+            height: 'auto',
+            overflow: 'scroll'
+        });
+    })
     let mh = 0;
     $(".equal-box > div").each(function () {
         if (mh < $(this).height()) {
@@ -299,6 +318,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+
+
 
 })
 

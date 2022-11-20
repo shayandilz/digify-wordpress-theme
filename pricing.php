@@ -11,7 +11,7 @@ get_header(); ?>
                 <p class="text-dark mb-5 mb-lg-1">
                     <?php the_field('pricing_text'); ?>
                 </p>
-                <div class="py-5 swiper swiper4 swiper-custom overflow-visible px-4">
+                <div class="py-5 swiper swiper4 swiper-custom overflow-visible px-0 px-lg-4">
                     <div class="swiper-pagination w-auto gap-2 d-inline-flex position-relative float-end"
                          style="padding: 8px 4px;">
                         <span class="marker"></span>
@@ -37,10 +37,10 @@ get_header(); ?>
                                     </div>
                                     <div class="overflow-hidden px-lg-5 px-2">
                                         <div class="pt-5 text-center row flex-column-reverse flex-lg-row align-items-center position-relative">
-                                            <div class="col-lg-8 col-12 pt-2 pb-4 px-lg-0">
+                                            <div class="col-lg-8 col-12 pt-2 pb-4 px-0">
                                                 <?php
                                                 if (have_rows('list')): ?>
-                                                    <ul class="text-start px-4">
+                                                    <ul class="text-start px-lg-4 ps-4">
                                                         <?php
                                                         while (have_rows('list')): the_row(); ?>
                                                             <li>

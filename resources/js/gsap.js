@@ -11,78 +11,13 @@ gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, CSSRulePlugin)
 
 $(function () {
     // check for element
-    if (gsap.utils.toArray('#drawSvg')) {
+    if (gsap.utils.toArray('#drawSvg').length) {
         let shapes = "#drawSvg path",
             tl = gsap.timeline();
 
         tl.fromTo(shapes, {duration: 5, visibility: "visible", drawSVG: "0%"}, {duration: 5, drawSVG: "100%"})
     }
-    let targets = gsap.utils.toArray(
-        ".icon-section > div," +
-        ".icon-section," +
-        ".icon-section > div:nth-child(1) span, " +
-        ".icon-section > div:nth-child(2) span, " +
-        ".icon-section > div:nth-child(3) span, " +
-        ".icon1, " +
-        ".icon2, " +
-        ".icon3, " +
-        ".section-1, " +
-        ".section-2, " +
-        ".section-3, " +
-        ".svg-draw, " +
-        "#star-path, " +
-        ".tile-section, " +
-        ".tiles path:first-child, " +
-        ".tiles path:last-child"
-    );
-    if (targets.length) {
-        // let box1 = document.querySelector(".box1");
-        // let box2 = document.querySelector(".box2");
-        // let box3 = document.querySelector(".box3");
-        // ScrollTrigger.matchMedia({
-        //     "(min-width: 1080px)": function () {
-        //         let section1 = gsap.timeline({
-        //             scrollTrigger: {
-        //                 trigger: ".section-1",
-        //                 scrub: 2,
-        //                 start: "top center",
-        //                 end: "bottom center"
-        //             }
-        //         })
-        //             .fromTo(box1, {translateY: 0}, {translateY: -130})
-        //         let section2 = gsap.timeline({
-        //             scrollTrigger: {
-        //                 trigger: ".section-2",
-        //                 scrub: 2,
-        //                 start: "top center",
-        //                 end: "bottom center"
-        //             }
-        //         })
-        //             .fromTo(box2, {translateY: 0}, {translateY: -160})
-        //
-        //         let section3 = gsap.timeline({
-        //             scrollTrigger: {
-        //                 trigger: ".section-3",
-        //                 scrub: 2,
-        //                 start: "top center",
-        //                 end: "bottom center"
-        //             }
-        //         })
-        //             .fromTo(box3, {translateY: 0}, {translateY: -70})
-        //     }
-        // });
-        let rule = CSSRulePlugin.getRule(".first-circle")
-
-        let lineSVG = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".svg-draw",
-                start: "-300px center",
-                end: "150px center",
-                scrub: true
-            }
-        })
-        lineSVG.fromTo('#star-path', 0.3, {drawSVG: "0%"}, {drawSVG: "100%"});
-
+    if (gsap.utils.toArray('.tile-section').length){
         let tile1 = document.querySelector(".tiles path:first-child");
         let tile2 = document.querySelector(".tiles path:last-child");
 
@@ -100,6 +35,37 @@ $(function () {
         tiles.fromTo(tile2,
             {fill: 'transparent', translateY: '+190px', translateX: '+50px'},
             {fill: '#F46B5E', translateY: '0px', translateX: '0px'});
+    }
+    let targets = gsap.utils.toArray(
+        ".icon-section > div," +
+        ".icon-section," +
+        ".icon-section > div:nth-child(1) span, " +
+        ".icon-section > div:nth-child(2) span, " +
+        ".icon-section > div:nth-child(3) span, " +
+        ".icon1, " +
+        ".icon2, " +
+        ".icon3, " +
+        ".section-1, " +
+        ".section-2, " +
+        ".section-3, " +
+        ".svg-draw, " +
+        "#star-path, " +
+        ".tiles path:first-child, " +
+        ".tiles path:last-child"
+    );
+
+    if (targets.length) {
+        let rule = CSSRulePlugin.getRule(".first-circle")
+
+        let lineSVG = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".svg-draw",
+                start: "-300px center",
+                end: "150px center",
+                scrub: true
+            }
+        })
+        lineSVG.fromTo('#star-path', 0.3, {drawSVG: "0%"}, {drawSVG: "100%"});
 
         let icon1 = document.querySelector('.icon1');
         let icon2 = document.querySelector('.icon2');
@@ -130,7 +96,7 @@ $(function () {
     }
 
 
-    if (gsap.utils.toArray('progress, .sticky-side')) {
+    if (gsap.utils.toArray('progress, .sticky-side').length) {
         gsap.to('progress', {
             value: 100,
             ease: 'none',

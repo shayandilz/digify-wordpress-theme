@@ -5,8 +5,8 @@ get_header(); ?>
 
     <section class="py-5 d-flex align-items-center bg-white vh-65">
         <div class="container mb-lg-5">
-            <div class="row align-items-center g-5 g-lg-4">
-                <div class="col-lg-5 col-12">
+            <div class="row align-items-center justify-content-center g-5 g-lg-4">
+                <div class="col-lg-5 col-10">
                     <?php
                     $banner_image = get_field('banner_image');
                     ?>
@@ -16,7 +16,7 @@ get_header(); ?>
                              alt="<?= $banner_image['alt'] ?>">
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 ms-4">
+                <div class="col-lg-6 col-12 mx-4">
                     <h1 class="text-dark fw-bold lh-base wow animate__animated animate__fadeInUp">
                         <?php the_field('banner_top_title'); ?>
                     </h1>
@@ -49,12 +49,12 @@ get_header(); ?>
     <div id="scroll-to" class="opacity-0 pt-5"></div>
 <?php get_template_part( 'template-parts/box-purple' ); ?>
     <section class="container">
-        <div class="row py-5">
+        <div class="row py-5 g-5 g-lg-2">
             <div class="col-lg-6 col-12 wow animate__animated animate__fadeIn d-flex justify-content-center">
                 <?php
                 $contact_image = get_field('image_gform');
                 ?>
-                <div class="card-shadow w-75 rounded-2 d-flex" style="height: 600px">
+                <div class="card-shadow w-75 rounded-2 d-flex">
                     <img src="<?= $contact_image['url'] ?>" class="w-100 border border-semi-light rounded-2 object-fit"
                          alt="<?= $contact_image['alt'] ?>">
                 </div>

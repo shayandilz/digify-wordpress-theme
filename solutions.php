@@ -3,12 +3,12 @@
 get_header(); ?>
 
 
-    <section class="py-5 d-flex align-items-start vh-100 position-relative">
+    <section class="py-lg-5 d-flex align-items-start vh-100 position-relative">
         <div class="position-absolute top-0 end-0 mt-4 d-none d-lg-block">
             <?php get_template_part( 'template-parts/SVG/curve-line' ); ?>
         </div>
         <div class="container mb-lg-5">
-            <div class="row align-items-center">
+            <div class="row align-items-center flex-column-reverse flex-lg-row g-4 g-lg-1">
                 <div class="col-lg-6 col-12">
                     <h1 class="text-dark fw-bold lh-base pb-3 wow animate__animated animate__fadeInUp">
                         <?php the_field('solution_title'); ?>
@@ -20,13 +20,13 @@ get_header(); ?>
                     $light_button = get_field('light_button');
                     $dark_button = get_field('dark_button');
                     ?>
-                    <div class="d-flex gap-5">
+                    <div class="d-flex gap-md-5 gap-1 flex-column flex-md-row">
                         <a href="<?= $dark_button['url'] ?>"
-                           class="w-auto link-dark border rounded-1 btn fs-6 d-flex gap-2 align-items-center wow animate__animated animate__fadeInDown animate__delay-1s">
+                           class="w-auto text-md-start text-center link-dark border justify-content-center rounded-1 btn fs-6 d-flex gap-2 align-items-center wow animate__animated animate__fadeInDown animate__delay-1s">
                             <?= $dark_button['title'] ?>
                         </a>
                         <a href="<?= $light_button['url'] ?>"
-                           class="w-auto link-white border rounded-1 btn fs-6 d-flex gap-2 align-items-center wow animate__animated animate__fadeInDown animate__delay-2s">
+                           class="w-auto text-md-start text-center link-white border justify-content-center rounded-1 btn fs-6 d-flex gap-2 align-items-center wow animate__animated animate__fadeInDown animate__delay-2s">
                             <?= $light_button['title'] ?>
                         </a>
                     </div>
@@ -45,14 +45,14 @@ get_header(); ?>
         </div>
     </section>
 <?php get_template_part( 'template-parts/box-purple' ); ?>
-    <section class="container py-5 vh-65 d-flex justify-content-center align-items-center">
+    <section class="container py-5 d-flex justify-content-center align-items-center">
         <div class="row justify-content-center align-items-center wow animate__animated animate__fadeIn animate__delay-2s">
-            <div class="col-10 ">
+            <div class="col-12 col-lg-8 ">
                 <div class="position-relative d-flex">
                     <?php
                     $file = get_field('solution_video');
                     ?>
-                    <video id="video" height="400px" width="1200px" poster="<?php echo $file['image']['url'] ?>">
+                    <video id="video" class="w-100" style="max-height: 100%" poster="<?php echo $file['image']['url'] ?>">
                         <source src="<?php echo $file['video']['url'] ?>" type="video/mp4">
                     </video>
                     <div id="video_tr"

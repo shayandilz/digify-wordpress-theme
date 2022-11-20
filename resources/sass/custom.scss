@@ -1,7 +1,7 @@
 // Fonts
 //@import '../fonts/Dana/fontface';
 //@import '../fonts/icomoon/icomoon';
-@import 'modules/bootstrap-icons';
+//@import 'modules/bootstrap-icons';
 
 //custom classes
 @import "custom/variables";
@@ -42,7 +42,7 @@
     }
 
     .sub-menu {
-      @extend .bg-white, .px-2, .dropdown-menu, .w-auto, .text-end;
+      @extend .bg-white, .px-2, .dropdown-menu, .w-auto;
 
       .menu-item {
         @extend .d-flex, .align-items-center, .p-1, .p-lg-3, .gap-3, .menu-svg, .flex-row-reverse;
