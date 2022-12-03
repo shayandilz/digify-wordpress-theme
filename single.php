@@ -18,7 +18,7 @@ while (have_posts()) :
     <div class="position-fixed blog-progress w-100 z-top">
         <progress class="postProgressBar w-100" max="100" value="0"></progress>
     </div>
-    <div class="container" >
+    <div class="container">
         <div class="row align-items-center">
             <div class="col-12">
 
@@ -70,18 +70,31 @@ while (have_posts()) :
                 <div class="col-12 py-5">
                     <h6 class="pb-3 text-start text-lg-center fs-3 fw-bold">جدیدترین پست‌های بلاگ دیجی‌فای</h6>
                     <div class="row gap-5 gap-lg-0">
-                        <div class="col-lg-6 col-12">
-                            <?php get_template_part('template-parts/blog-post'); ?>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <?php get_template_part('template-parts/blog-post'); ?>
-                        </div>
+                        <?php
+                        $args = array(
+                            'post_type' => 'post',
+                            'post_status' => 'publish',
+                            'posts_per_page' => '2',
+                            'ignore_sticky_posts' => true
+                        );
+                        $loop = new WP_Query($args);
+                        if ($loop->have_posts()) : $i = 0;
+                            /* Start the Loop */
+                            while ($loop->have_posts()) :
+                                $loop->the_post(); ?>
+                                <div class="col-lg-6 col-12">
+                                    <?php get_template_part('template-parts/blog-post'); ?>
+                                </div>
+                            <?php endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
                     </div>
                 </div>
             </div>
             <?php
-            $sticky_side_post = get_field('sticky_side_post','option');
-            if ($sticky_side_post){?>
+            $sticky_side_post = get_field('sticky_side_post', 'option');
+            if ($sticky_side_post) {
+                ?>
                 <aside class="col-lg-2 col-12">
                     <div class="bg-purple d-flex flex-column gap-4 px-3 py-5 text-center sticky-section">
                     <span class="text-white">
@@ -91,7 +104,8 @@ while (have_posts()) :
                             <?= $sticky_side_post['text'] ?>
                         </p>
 
-                        <a href="<?= $sticky_side_post['button']['url'] ?>" class="btn link-dark d-flex align-items-center justify-content-center">
+                        <a href="<?= $sticky_side_post['button']['url'] ?>"
+                           class="btn link-dark d-flex align-items-center justify-content-center">
                             <?= $sticky_side_post['button']['title'] ?>
                         </a>
                     </div>

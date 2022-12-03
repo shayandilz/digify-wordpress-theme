@@ -46,6 +46,7 @@ shadow.init();
 document.addEventListener('DOMContentLoaded', function () {
     require('./gsap');
 
+
     function css(element, style) {
         for (const property in style)
             element.style[property] = style[property];
