@@ -46,7 +46,7 @@ get_header(); ?>
                 <?php foreach ($services as $post):
                     setup_postdata($post); ?>
                     <a href="<?php the_permalink(); ?>"
-                       class="fadein d-flex flex-column align-items-center gap-1 col-lg col-6 border-start border-semi-light text-center no-border-first no-border-last ">
+                       class="fadein d-flex flex-column align-items-center gap-5 col-lg col-6 border-start border-semi-light text-center no-border-first no-border-last ">
                         <div class="position-relative max-width-28 py-2 menu-svg">
                             <div class="position-relative justify-content-center align-items-center"
                                  style="width: 30px;height: 30px">

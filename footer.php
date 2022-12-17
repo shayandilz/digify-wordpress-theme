@@ -12,7 +12,7 @@ $sign_up = get_field('sign_up', 'option');
             </svg>
             ثبت‌نام در دیجی‌فای
         </a>
-        <a href="<?= $sign_in ?>" class="me-md-4 text-dark border fw-normal text-decoration-none fs-6 btn bg-white link-white w-25 text-center">
+        <a href="<?= $sign_in ?>" class="me-md-4 text-dark border fw-normal text-decoration-none fs-6 btn bg-white link-white w-25 text-center d-flex align-items-center justify-content-center">
             ورود
         </a>
 
